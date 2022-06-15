@@ -9,51 +9,55 @@
     <title>Document</title>
 </head>
 <body onload="DefaultScreen()">
-    <jumbotron>
-        <h1 id="Para1">5 Days Weather Forecast</h1>
+    <div id="center">
+        <h1 id="Para1">Weather Dashboard</h1>
         <p id="inputContainer">City: <input type="text" id="cityInput"></p>
         <button type="button" onclick="GetInfo()">Click Me</button>        
         <h2 id="cityName">---London---</h2>
-    </jumbotron>>
+    </div>
     
-    <div id = "weatherContainer">
-        <div id="iconsContainer">    
+           <div class="iconcontainer">
             <div class = "icons">
                 <p class="weather" id="day1"></p>
-                <div class="image"><img src="images\cloud.png" class="imgClass" id="img1"></div>
-                <p class="minValues" id="day1Min">Loading...</p>
-                <p class="maxValues" id="day1Max">Loading...</p>
+                <div class="image"><img src="assets\images\cloud.png" class="imgClass" id="img1"></div>
+                <p class="tempValues" id="day1temp">Loading...</p>
+                <br><p class="windvalue" id="wind1">loading..</p>
+                <br><p class="humvalue" id="hum1">loading..</p>
+                
             </div>
             <div class = "icons">
                 <p class="weather" id="day2"></p>
-                <div class="image"><img src="images\cloud.png" class="imgClass" id="img2"></div>
-                <p class="minValues" id="day2Min">Loading...</p>
-                <p class="maxValues" id="day2Max">Loading...</p>
+                <div class="image"><img src="assets\images\cloud.png" class="imgClass" id="img2"></div>
+                <p class="tempValues" id="day2temp">Loading...</p>
+               <br><p class="windvalue" id="wind2">loading..</p>
+                <br><p class="humvalue" id="humidity2">loading..</p>
             </div>
             <div class = "icons">
                 <p class="weather" id="day3"></p>
-                <div class="image"><img src="images\cloud.png" class="imgClass" id="img3"></div>
-                <p class="minValues" id="day3Min">Loading...</p>
-                <p class="maxValues" id="day3Max">Loading...</p>
+                <div class="image"><img src="assets\images\cloud.png" class="imgClass" id="img3"></div>
+               <p class="tempValues" id="day3temp">Loading...</p>
+                <br><p class="windvalue" id="wind3">loading..</p>
+                <br><p class="humvalue" id="humidity3">loading..</p>
             </div>
             <div class = "icons">
                 <p class="weather" id="day4"></p>
-                <div class="image"><img src="images\cloud.png" class="imgClass" id="img4"></div>
-                <p class="minValues" id="day4Min">Loading...</p>
-                <p class="maxValues" id="day4Max">Loading...</p>
+                <div class="image"><img src="assets\images\cloud.png" class="imgClass" id="img4"></div>
+              <p class="tempValues" id="day4temp">Loading...</p> 
+               <br><p class="windvalue" id="wind4">loading..</p>
+              <br><p class="humvalue" id="humidity4">loading..</p>
             </div>
             <div class = "icons">
                 <p class="weather" id="day5"></p>
-                <div class="image"><img src="images\cloud.png" class="imgClass" id="img5"></div>
-                <p class="minValues" id="day5Min">Loading...</p>
-                <p class="maxValues" id="day5Max">Loading...</p>
+                <div class="image"><img src="assets\images\cloud.png" class="imgClass" id="img5"></div>
+              <p class="tempValues" id="day5temp">Loading...</p>
+               <br><p class="windvalue" id="wind5">loading..</p>
+               <br><p class="humvalue" id="humidity5">loading..</p>
             </div>
         </div>
-    </div>
 
 
         
 
-
+<srcipt src="assets/js/script.js"></srcipt>
 </body>
 </html>
