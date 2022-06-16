@@ -30,12 +30,15 @@ $(document).ready(function () {
     return comparison;
 }
    function loadCities() {
- 
+    const storedCities = JSON.parse(localStorage.getItem('pastCities'));
+    if (storedCities) {
+        pastCities = storedCities;
+    }
 }
 
 
 function storeCities() {
-   
+    localStorage.setItem('pastCities', JSON.stringify(pastCities));
 }
 
 
@@ -52,7 +55,16 @@ function buildURLFromId(id) {
 
 
  function displayCities(pastCities) {
-   
+    cityListEl.empty();
+    pastCities.splice(5);
+    let sortedCities = [...pastCities];
+    sortedCities.sort(compare);
+    sortedCities.forEach(function (location) {
+        let cityDiv = $('<div>').addClass('col-12 city');
+        let cityBtn = $('<button>').addClass('btn btn-light city-btn').text(location.city);
+        cityDiv.append(cityBtn);
+        cityListEl.append(cityDiv);
+    });
 }
 
 
@@ -135,7 +147,7 @@ function searchWeather(queryURL) {
         let queryURL = buildURLFromId(pastCities[0].id);
         searchWeather(queryURL);
     } else {
-        
+        // if no past searched cities, load Detroit weather data
         let queryURL = buildURLFromInputs("Detroit");
         searchWeather(queryURL);
     }
@@ -170,8 +182,8 @@ $(document).on("click", "button.city-btn", function (event) {
 });
 
 loadCities();
-
-
+displayCities(pastCities);
+displayLastSearchedCity();
 
 
 
